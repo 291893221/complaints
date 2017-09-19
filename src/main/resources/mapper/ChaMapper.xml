@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huaxing.complaints.dao.ChaMapper">
+	<select id="getChaXMonth" resultType="java.util.HashMap">
+	SELECT SUBSTR(field36,1,7) AS YM ,COUNT(*) AS CNT FROM t_ori_net_v600 GROUP BY SUBSTR(field36,1,7) ORDER BY ym
+	</select>
+</mapper>

@@ -1,0 +1,198 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.huaxing</groupId>
+	<artifactId>complaints</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>complaints Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<!-- 添加Spring4.1.4的核心包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.1.4.RELEASE</version>
+		</dependency>
+		<!-- 添加Spring-core包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.1.4.RELEASE</version>
+		</dependency>
+		<!-- 添加Spring-webmvc包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.1.4.RELEASE</version>
+		</dependency>
+		<!-- 添加spring-context包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.1.4.RELEASE</version>
+		</dependency>
+		<!-- 添加spring-tx包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.1.4.RELEASE</version>
+		</dependency>
+		<!-- 添加spring-jdbc包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>4.1.4.RELEASE</version>
+		</dependency>
+		<!-- 为了方便进行单元测试，添加spring-test包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.1.4.RELEASE</version>
+		</dependency>
+		<!--添加spring-web包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.1.4.RELEASE</version>
+		</dependency>
+		<!--添加aspectjweaver包 -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+		<!-- 添加mybatis的核心包 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.2.8</version>
+		</dependency>
+		<!-- 添加mybatis与Spring整合的核心包 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<!-- 添加servlet3.0核心包 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.3.2-b01</version>
+		</dependency>
+		<!-- jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- 添加oracle驱动包 -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.4.0</version>
+		</dependency>
+		<!-- 添加druid连接池包 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.0.12</version>
+		</dependency>
+		<!-- 添加junit单元测试包 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- 添加json转换包 -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20151123</version>
+		</dependency>
+		<!-- 添加log4j日志包 -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.9</version>
+		</dependency>
+		<!-- 添加commons-fileupload.jar包 -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		<!-- 添加excel解析工具包 -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.13</version>
+		</dependency>
+		<!-- 添加poi-excelant包 -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-excelant</artifactId>
+			<version>3.13</version>
+		</dependency>
+		<!-- 添加Apache Commons BeanUtils -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>complaints</finalName>
+		<plugins>
+			<!-- install跳过单元测试 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<!-- mybatis-generator:generate -->
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.2</version>
+				<configuration>
+					<!--允许移动生成的文件-->
+					<verbose>true</verbose>
+					<!--允许覆盖生成的文件-->
+					<overwrite>true</overwrite>
+				</configuration>
+				<dependencies>
+					<!-- 添加oracle驱动包 -->
+					<dependency>
+						<groupId>com.oracle</groupId>
+						<artifactId>ojdbc14</artifactId>
+						<version>10.2.0.4.0</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<!-- jetty:run -->
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.3.7.v20160115</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<webApp>
+						<contextPath>/${project.build.finalName}</contextPath>
+					</webApp>
+					<httpConnector>
+						<port>80</port>
+					</httpConnector>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huaxing.complaints.dao.AccountsMapper">
+	<resultMap id="BaseResultMap" type="com.huaxing.complaints.model.Accounts">
+		<id column="ID" property="id" jdbcType="VARCHAR" />
+		<result column="ACCOUNT" property="account" jdbcType="VARCHAR" />
+		<result column="PASSWORD" property="password" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, ACCOUNT, PASSWORD
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from T_ACCOUNTS
+		where ID = #{id,jdbcType=VARCHAR}
+	</select>
+	<select id="getPasswordByaccount" resultType="java.lang.String"
+		parameterType="java.lang.String">
+		select PASSWORD from T_ACCOUNTS
+		where ACCOUNT = #{account,jdbcType=VARCHAR}
+	</select>
+	<select id="selectAccounts" resultMap="BaseResultMap"
+		parameterType="com.huaxing.complaints.model.Accounts">
+		select
+		<include refid="Base_Column_List" />
+		from T_ACCOUNTS
+		where 1 = 1
+		<if test="id != null">
+			and ID = #{id,jdbcType=VARCHAR}
+		</if>
+		<if test="account != null">
+			and ACCOUNT = #{account,jdbcType=VARCHAR}
+		</if>
+		<if test="password != null">
+			and PASSWORD = #{password,jdbcType=VARCHAR}
+		</if>
+	</select>
+	<select id="selectAccountsByFields" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from T_ACCOUNTS
+		where 1 = 1
+		<if test="id != null">
+			and ID = #{id,jdbcType=VARCHAR}
+		</if>
+		<if test="account != null">
+			and ACCOUNT = #{account,jdbcType=VARCHAR}
+		</if>
+		<if test="password != null">
+			and PASSWORD = #{password,jdbcType=VARCHAR}
+		</if>
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from T_ACCOUNTS
+		where ID = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert" parameterType="com.huaxing.complaints.model.Accounts">
+		insert into T_ACCOUNTS (ID, ACCOUNT, PASSWORD
+		)
+		values (#{id,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective" parameterType="com.huaxing.complaints.model.Accounts">
+		insert into T_ACCOUNTS
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				ID,
+			</if>
+			<if test="account != null">
+				ACCOUNT,
+			</if>
+			<if test="password != null">
+				PASSWORD,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="account != null">
+				#{account,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				#{password,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.huaxing.complaints.model.Accounts">
+		update T_ACCOUNTS
+		<set>
+			<if test="account != null">
+				ACCOUNT = #{account,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				PASSWORD = #{password,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updatePasswordByAccount" parameterType="com.huaxing.complaints.model.Accounts">
+		update T_ACCOUNTS
+		<set>
+			<if test="password != null">
+				PASSWORD = #{password,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where ACCOUNT = #{account,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.huaxing.complaints.model.Accounts">
+		update T_ACCOUNTS
+		set ACCOUNT = #{account,jdbcType=VARCHAR},
+		PASSWORD = #{password,jdbcType=VARCHAR}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+</mapper>

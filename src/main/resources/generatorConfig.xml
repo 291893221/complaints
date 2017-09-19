@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<properties resource="dbconfig.properties"/>
+	
+	<context id="context1" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 抑制所有注释 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        <jdbcConnection driverClass="${driverClassName}"
+                    connectionURL="${jdbc_url}"
+                    userId="${jdbc_username}"
+                    password="${jdbc_password}">
+		</jdbcConnection>
+		<javaModelGenerator targetPackage="com.huaxing.complaints.model" targetProject="D:\GEN\code" />
+		<sqlMapGenerator targetPackage="mapper" targetProject="D:\GEN\code" />
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.huaxing.complaints.dao" targetProject="D:\GEN\code" />
+		
+		<table tableName="T_ORI_BLACK_DOT_LIBRARY" domainObjectName="OriBlackDotLibrary" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+	</context>
+</generatorConfiguration>

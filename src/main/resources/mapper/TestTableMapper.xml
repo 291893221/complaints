@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huaxing.complaints.dao.TestTableMapper">
+	<resultMap id="BaseResultMap" type="com.huaxing.complaints.model.TestTable">
+		<id column="FIELD1" property="field1" jdbcType="VARCHAR" />
+		<result column="FIELD2" property="field2" jdbcType="VARCHAR" />
+		<result column="FIELD3" property="field3" jdbcType="VARCHAR" />
+		<result column="FIELD4" property="field4" jdbcType="VARCHAR" />
+		<result column="FIELD5" property="field5" jdbcType="VARCHAR" />
+		<result column="FIELD6" property="field6" jdbcType="VARCHAR" />
+		<result column="FIELD7" property="field7" jdbcType="VARCHAR" />
+		<result column="FIELD8" property="field8" jdbcType="VARCHAR" />
+		<result column="FIELD9" property="field9" jdbcType="VARCHAR" />
+		<result column="FIELD10" property="field10" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="columnList">
+		FIELD1, FIELD2, FIELD3, FIELD4, FIELD5, FIELD6, FIELD7, FIELD8, FIELD9,
+		FIELD10
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="columnList" />
+		from TEST_TABLE
+		where FIELD1 = #{field1,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from TEST_TABLE
+		where FIELD1 = #{field1,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert" parameterType="com.huaxing.complaints.model.TestTable">
+		insert into TEST_TABLE (FIELD1, FIELD2, FIELD3,
+		FIELD4, FIELD5, FIELD6,
+		FIELD7, FIELD8, FIELD9,
+		FIELD10)
+		values (#{field1,jdbcType=VARCHAR}, #{field2,jdbcType=VARCHAR},
+		#{field3,jdbcType=VARCHAR},
+		#{field4,jdbcType=VARCHAR}, #{field5,jdbcType=VARCHAR}, #{field6,jdbcType=VARCHAR},
+		#{field7,jdbcType=VARCHAR}, #{field8,jdbcType=VARCHAR},
+		#{field9,jdbcType=VARCHAR},
+		#{field10,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="com.huaxing.complaints.model.TestTable">
+		insert into TEST_TABLE
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="field1 != null">
+				FIELD1,
+			</if>
+			<if test="field2 != null">
+				FIELD2,
+			</if>
+			<if test="field3 != null">
+				FIELD3,
+			</if>
+			<if test="field4 != null">
+				FIELD4,
+			</if>
+			<if test="field5 != null">
+				FIELD5,
+			</if>
+			<if test="field6 != null">
+				FIELD6,
+			</if>
+			<if test="field7 != null">
+				FIELD7,
+			</if>
+			<if test="field8 != null">
+				FIELD8,
+			</if>
+			<if test="field9 != null">
+				FIELD9,
+			</if>
+			<if test="field10 != null">
+				FIELD10,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="field1 != null">
+				#{field1,jdbcType=VARCHAR},
+			</if>
+			<if test="field2 != null">
+				#{field2,jdbcType=VARCHAR},
+			</if>
+			<if test="field3 != null">
+				#{field3,jdbcType=VARCHAR},
+			</if>
+			<if test="field4 != null">
+				#{field4,jdbcType=VARCHAR},
+			</if>
+			<if test="field5 != null">
+				#{field5,jdbcType=VARCHAR},
+			</if>
+			<if test="field6 != null">
+				#{field6,jdbcType=VARCHAR},
+			</if>
+			<if test="field7 != null">
+				#{field7,jdbcType=VARCHAR},
+			</if>
+			<if test="field8 != null">
+				#{field8,jdbcType=VARCHAR},
+			</if>
+			<if test="field9 != null">
+				#{field9,jdbcType=VARCHAR},
+			</if>
+			<if test="field10 != null">
+				#{field10,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.huaxing.complaints.model.TestTable">
+		update TEST_TABLE
+		<set>
+			<if test="field2 != null">
+				FIELD2 = #{field2,jdbcType=VARCHAR},
+			</if>
+			<if test="field3 != null">
+				FIELD3 = #{field3,jdbcType=VARCHAR},
+			</if>
+			<if test="field4 != null">
+				FIELD4 = #{field4,jdbcType=VARCHAR},
+			</if>
+			<if test="field5 != null">
+				FIELD5 = #{field5,jdbcType=VARCHAR},
+			</if>
+			<if test="field6 != null">
+				FIELD6 = #{field6,jdbcType=VARCHAR},
+			</if>
+			<if test="field7 != null">
+				FIELD7 = #{field7,jdbcType=VARCHAR},
+			</if>
+			<if test="field8 != null">
+				FIELD8 = #{field8,jdbcType=VARCHAR},
+			</if>
+			<if test="field9 != null">
+				FIELD9 = #{field9,jdbcType=VARCHAR},
+			</if>
+			<if test="field10 != null">
+				FIELD10 = #{field10,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where FIELD1 = #{field1,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.huaxing.complaints.model.TestTable">
+		update TEST_TABLE
+		set FIELD2 = #{field2,jdbcType=VARCHAR},
+		FIELD3 = #{field3,jdbcType=VARCHAR},
+		FIELD4 = #{field4,jdbcType=VARCHAR},
+		FIELD5 = #{field5,jdbcType=VARCHAR},
+		FIELD6 = #{field6,jdbcType=VARCHAR},
+		FIELD7 = #{field7,jdbcType=VARCHAR},
+		FIELD8 = #{field8,jdbcType=VARCHAR},
+		FIELD9 = #{field9,jdbcType=VARCHAR},
+		FIELD10 = #{field10,jdbcType=VARCHAR}
+		where FIELD1 = #{field1,jdbcType=VARCHAR}
+	</update>
+	<insert id="insertBatch" parameterType="java.util.List">
+		insert into
+		<include refid="tableName" />
+		(
+		<include refid="columnList" />
+		)
+		<foreach collection="list" item="item" index="index" separator="union all">
+			select
+			#{item.field1,jdbcType=VARCHAR},
+			#{item.field2,jdbcType=VARCHAR},
+			#{item.field3,jdbcType=VARCHAR},
+			#{item.field4,jdbcType=VARCHAR},
+			#{item.field5,jdbcType=VARCHAR},
+			#{item.field6,jdbcType=VARCHAR},
+			#{item.field7,jdbcType=VARCHAR},
+			#{item.field8,jdbcType=VARCHAR},
+			#{item.field9,jdbcType=VARCHAR},
+			#{item.field10,jdbcType=VARCHAR}
+			from dual
+		</foreach>
+	</insert>
+	<sql id="tableName">
+		TEST_TABLE
+	</sql>
+</mapper>

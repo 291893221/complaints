@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huaxing.complaints.dao.RepOneKeyMapper">
+	<select id="selectOneKeyWarning" resultType="java.util.HashMap">
+		with temp as
+		(
+		select FIELD36,FIELD41,FIELD18,FIELD27,FIELD28,FIELD29,FIELD32,FIELD38,FIELD39,FIELD40,FIELD42,FIELD51 
+		from t_ori_net_v600 
+		where 1=1 
+		<if test="importDate != null">
+		and FIELD51 = #{importDate,jdbcType=VARCHAR} 
+		</if>
+		<if test="startDate1 != null">
+		and FIELD36 >= #{startDate1,jdbcType=VARCHAR} 
+		</if>
+		<if test="endDate1 != null">
+		and  #{endDate1,jdbcType=VARCHAR} >= FIELD36
+		</if>
+		)
+		<if test="start != null and end != null">
+		select c.* from (select a.*, rownum rn from (
+		</if>
+			select * from (
+				select temp.field28 as phone, ph.ph_cnt as phonecount, '否' as isvip, '是' as isnps, '是' as convip, case ph.ph_cnt when 1 then '否' else '是' end as ismany from temp  
+				<if test="userType == null">
+				LEFT join V_ORI_NET_V600_PHONE
+				</if>
+				<if test="userType != null and userType == 'VIP' ">
+				INNER join V_ORI_NET_V600_PHONE_VIP
+				</if>
+				<if test="userType != null and userType == 'NPS' ">
+				INNER join V_ORI_NET_V600_PHONE_NPS
+				</if>
+				 ph ON temp.field28 = ph.field28 where temp.field29 not in ('银卡', '金卡', '钻卡', '贵宾', '钻石', '四星', '五星', '高价值') 
+				<if test="userType == null">
+				 AND ph.ph_cnt>=2
+				</if>
+			    union 
+			    select temp.field28 as phone, ph.ph_cnt as phonecount, '是' as isvip, '是' as isnps, '是' as convip, case ph.ph_cnt when 1 then '否' else '是' end as ismany from temp  
+				<if test="userType == null">
+				LEFT join V_ORI_NET_V600_PHONE
+				</if>
+				<if test="userType != null and userType == 'VIP' ">
+				INNER join V_ORI_NET_V600_PHONE_VIP
+				</if>
+				<if test="userType != null and userType == 'NPS' ">
+				INNER join V_ORI_NET_V600_PHONE_NPS
+				</if>
+				 ph ON temp.field28 = ph.field28 where field29 in ('银卡', '金卡', '钻卡', '贵宾', '钻石', '四星', '五星', '高价值')
+			)lt left join temp on lt.phone = temp.FIELD28
+		<if test="start != null and end != null">
+		) a where #{end,jdbcType=INTEGER} >= rownum) c where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<select id="selectOneKeyWarningCount" resultType="int">
+		with temp as
+		(
+		select FIELD36,FIELD41,FIELD18,FIELD27,FIELD28,FIELD29,FIELD32,FIELD38,FIELD39,FIELD40,FIELD42,FIELD51 
+		from t_ori_net_v600 
+		where 1=1 
+		<if test="importDate != null">
+		and FIELD51 = #{importDate,jdbcType=VARCHAR} 
+		</if>
+		<if test="startDate1 != null">
+		and FIELD36 >= #{startDate1,jdbcType=VARCHAR} 
+		</if>
+		<if test="endDate1 != null">
+		and  #{endDate1,jdbcType=VARCHAR} >= FIELD36
+		</if>
+		)
+		select count(*) from (
+			select temp.field28 as phone, ph.ph_cnt as phonecount, '否' as isvip, '是' as ismany from temp 
+			<if test="userType == null">
+			LEFT join V_ORI_NET_V600_PHONE
+			</if>
+			<if test="userType != null and userType == 'VIP' ">
+			INNER join V_ORI_NET_V600_PHONE_VIP
+			</if>
+			<if test="userType != null and userType == 'NPS' ">
+			INNER join V_ORI_NET_V600_PHONE_NPS
+			</if>
+			 ph ON temp.field28 = ph.field28 where temp.field29 not in ('银卡', '金卡', '钻卡', '贵宾', '钻石', '四星', '五星', '高价值') 
+			<if test="userType == null">
+			 AND ph.ph_cnt>=2
+			</if>
+		    union 
+		    select temp.field28 as phone, ph.ph_cnt as phonecount, '是' as isvip, case ph.ph_cnt when 1 then '否' else '是' end as ismany from temp 
+			<if test="userType == null">
+			LEFT join V_ORI_NET_V600_PHONE
+			</if>
+			<if test="userType != null and userType == 'VIP' ">
+			INNER join V_ORI_NET_V600_PHONE_VIP
+			</if>
+			<if test="userType != null and userType == 'NPS' ">
+			INNER join V_ORI_NET_V600_PHONE_NPS
+			</if>
+			 ph ON temp.field28 = ph.field28 where field29 in ('银卡', '金卡', '钻卡', '贵宾', '钻石', '四星', '五星', '高价值')
+		)lt left join temp on lt.phone = temp.FIELD28
+	</select>
+	<select id="selectTotal" resultType="java.util.HashMap">
+		with temp as
+		(
+		select FIELD36,FIELD41,FIELD18,FIELD27,FIELD28,FIELD29,FIELD32,FIELD38,FIELD39,FIELD40,FIELD42,FIELD51 
+		from t_ori_net_v600 
+		where 1=1 
+		<if test="importDate != null">
+		and FIELD51 = #{importDate,jdbcType=VARCHAR} 
+		</if>
+		<if test="startDate1 != null">
+		and FIELD36 >= #{startDate1,jdbcType=VARCHAR} 
+		</if>
+		<if test="endDate1 != null">
+		and  #{endDate1,jdbcType=VARCHAR} >= FIELD36
+		</if>
+		)
+		select #{startDate1} as startDate1, 
+		#{endDate1} as endDate1, 
+		t.duoci, t.total, 
+		CASE t.total WHEN 0 THEN 1 ELSE round(t.duoci/t.total,5) END as zhanbi 
+		from
+		(
+			select 
+			(
+				select count(*) from (
+					select temp.field28 as phone, ph.ph_cnt as phonecount, '否' as isvip, '是' as ismany from temp 
+					<if test="userType == null">
+					LEFT join V_ORI_NET_V600_PHONE
+					</if>
+					<if test="userType != null and userType == 'VIP' ">
+					INNER join V_ORI_NET_V600_PHONE_VIP
+					</if>
+					<if test="userType != null and userType == 'NPS' ">
+					INNER join V_ORI_NET_V600_PHONE_NPS
+					</if>
+					 ph ON temp.field28 = ph.field28 where temp.field29 not in ('银卡', '金卡', '钻卡', '贵宾', '钻石', '四星', '五星', '高价值') 
+					<if test="userType == null">
+					 AND ph.ph_cnt>=2
+					</if>
+				    union 
+				    select temp.field28 as phone, ph.ph_cnt as phonecount, '是' as isvip, case ph.ph_cnt when 1 then '否' else '是' end as ismany from temp 
+					<if test="userType == null">
+					LEFT join V_ORI_NET_V600_PHONE
+					</if>
+					<if test="userType != null and userType == 'VIP' ">
+					INNER join V_ORI_NET_V600_PHONE_VIP
+					</if>
+					<if test="userType != null and userType == 'NPS' ">
+					INNER join V_ORI_NET_V600_PHONE_NPS
+					</if>
+					 ph ON temp.field28 = ph.field28 where field29 in ('银卡', '金卡', '钻卡', '贵宾', '钻石', '四星', '五星', '高价值')
+				)lt
+			) duoci,
+			(
+				select count(*) from temp 
+			) total
+			from dual
+		) t
+	</select>
+</mapper>

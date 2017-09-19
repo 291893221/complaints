@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huaxing.complaints.dao.OriNetV600Mapper">
+	<resultMap id="BaseResultMap" type="com.huaxing.complaints.model.OriNetV600">
+		<result column="FIELD0" property="field0" jdbcType="VARCHAR" />
+		<result column="FIELD1" property="field1" jdbcType="VARCHAR" />
+		<result column="FIELD2" property="field2" jdbcType="VARCHAR" />
+		<result column="FIELD3" property="field3" jdbcType="VARCHAR" />
+		<result column="FIELD4" property="field4" jdbcType="VARCHAR" />
+		<result column="FIELD5" property="field5" jdbcType="VARCHAR" />
+		<result column="FIELD6" property="field6" jdbcType="VARCHAR" />
+		<result column="FIELD7" property="field7" jdbcType="VARCHAR" />
+		<result column="FIELD8" property="field8" jdbcType="VARCHAR" />
+		<result column="FIELD9" property="field9" jdbcType="VARCHAR" />
+		<result column="FIELD10" property="field10" jdbcType="VARCHAR" />
+		<result column="FIELD11" property="field11" jdbcType="VARCHAR" />
+		<result column="FIELD12" property="field12" jdbcType="VARCHAR" />
+		<result column="FIELD13" property="field13" jdbcType="VARCHAR" />
+		<result column="FIELD14" property="field14" jdbcType="VARCHAR" />
+		<result column="FIELD15" property="field15" jdbcType="VARCHAR" />
+		<result column="FIELD16" property="field16" jdbcType="VARCHAR" />
+		<result column="FIELD17" property="field17" jdbcType="VARCHAR" />
+		<result column="FIELD18" property="field18" jdbcType="VARCHAR" />
+		<result column="FIELD19" property="field19" jdbcType="VARCHAR" />
+		<result column="FIELD20" property="field20" jdbcType="VARCHAR" />
+		<result column="FIELD21" property="field21" jdbcType="VARCHAR" />
+		<result column="FIELD22" property="field22" jdbcType="VARCHAR" />
+		<result column="FIELD23" property="field23" jdbcType="VARCHAR" />
+		<result column="FIELD24" property="field24" jdbcType="VARCHAR" />
+		<result column="FIELD25" property="field25" jdbcType="VARCHAR" />
+		<result column="FIELD26" property="field26" jdbcType="VARCHAR" />
+		<result column="FIELD27" property="field27" jdbcType="VARCHAR" />
+		<result column="FIELD28" property="field28" jdbcType="VARCHAR" />
+		<result column="FIELD29" property="field29" jdbcType="VARCHAR" />
+		<result column="FIELD30" property="field30" jdbcType="VARCHAR" />
+		<result column="FIELD31" property="field31" jdbcType="VARCHAR" />
+		<result column="FIELD32" property="field32" jdbcType="VARCHAR" />
+		<result column="FIELD33" property="field33" jdbcType="VARCHAR" />
+		<result column="FIELD34" property="field34" jdbcType="VARCHAR" />
+		<result column="FIELD35" property="field35" jdbcType="VARCHAR" />
+		<result column="FIELD36" property="field36" jdbcType="VARCHAR" />
+		<result column="FIELD37" property="field37" jdbcType="VARCHAR" />
+		<result column="FIELD38" property="field38" jdbcType="VARCHAR" />
+		<result column="FIELD39" property="field39" jdbcType="VARCHAR" />
+		<result column="FIELD40" property="field40" jdbcType="VARCHAR" />
+		<result column="FIELD41" property="field41" jdbcType="VARCHAR" />
+		<result column="FIELD42" property="field42" jdbcType="VARCHAR" />
+		<result column="FIELD43" property="field43" jdbcType="VARCHAR" />
+		<result column="FIELD44" property="field44" jdbcType="VARCHAR" />
+		<result column="FIELD45" property="field45" jdbcType="VARCHAR" />
+		<result column="FIELD46" property="field46" jdbcType="VARCHAR" />
+		<result column="FIELD47" property="field47" jdbcType="VARCHAR" />
+		<result column="FIELD48" property="field48" jdbcType="VARCHAR" />
+		<result column="FIELD49" property="field49" jdbcType="VARCHAR" />
+		<result column="FIELD50" property="field50" jdbcType="VARCHAR" />
+	</resultMap>
+	<insert id="insert" parameterType="com.huaxing.complaints.model.OriNetV600">
+		insert into T_ORI_NET_V600
+		(FIELD1, FIELD2, FIELD3,
+		FIELD4, FIELD5, FIELD6,
+		FIELD7, FIELD8, FIELD9,
+		FIELD10, FIELD11, FIELD12,
+		FIELD13, FIELD14, FIELD15,
+		FIELD16, FIELD17,
+		FIELD18,
+		FIELD19, FIELD20, FIELD21,
+		FIELD22, FIELD23, FIELD24,
+		FIELD25,
+		FIELD26, FIELD27,
+		FIELD28, FIELD29, FIELD30,
+		FIELD31, FIELD32, FIELD33,
+		FIELD34, FIELD35, FIELD36,
+		FIELD37, FIELD38, FIELD39,
+		FIELD40, FIELD41,
+		FIELD42,
+		FIELD43, FIELD44, FIELD45,
+		FIELD46, FIELD47, FIELD48,
+		FIELD49,
+		FIELD50)
+		values (#{field1,jdbcType=VARCHAR},
+		#{field2,jdbcType=VARCHAR},
+		#{field3,jdbcType=VARCHAR},
+		#{field4,jdbcType=VARCHAR}, #{field5,jdbcType=VARCHAR},
+		#{field6,jdbcType=VARCHAR},
+		#{field7,jdbcType=VARCHAR},
+		#{field8,jdbcType=VARCHAR},
+		#{field9,jdbcType=VARCHAR},
+		#{field10,jdbcType=VARCHAR}, #{field11,jdbcType=VARCHAR},
+		#{field12,jdbcType=VARCHAR},
+		#{field13,jdbcType=VARCHAR},
+		#{field14,jdbcType=VARCHAR},
+		#{field15,jdbcType=VARCHAR},
+		#{field16,jdbcType=VARCHAR}, #{field17,jdbcType=VARCHAR},
+		#{field18,jdbcType=VARCHAR},
+		#{field19,jdbcType=VARCHAR},
+		#{field20,jdbcType=VARCHAR},
+		#{field21,jdbcType=VARCHAR},
+		#{field22,jdbcType=VARCHAR}, #{field23,jdbcType=VARCHAR},
+		#{field24,jdbcType=VARCHAR},
+		#{field25,jdbcType=VARCHAR},
+		#{field26,jdbcType=VARCHAR},
+		#{field27,jdbcType=VARCHAR},
+		#{field28,jdbcType=VARCHAR}, #{field29,jdbcType=VARCHAR},
+		#{field30,jdbcType=VARCHAR},
+		#{field31,jdbcType=VARCHAR},
+		#{field32,jdbcType=VARCHAR},
+		#{field33,jdbcType=VARCHAR},
+		#{field34,jdbcType=VARCHAR}, #{field35,jdbcType=VARCHAR},
+		#{field36,jdbcType=VARCHAR},
+		#{field37,jdbcType=VARCHAR},
+		#{field38,jdbcType=VARCHAR},
+		#{field39,jdbcType=VARCHAR},
+		#{field40,jdbcType=VARCHAR}, #{field41,jdbcType=VARCHAR},
+		#{field42,jdbcType=VARCHAR},
+		#{field43,jdbcType=VARCHAR},
+		#{field44,jdbcType=VARCHAR},
+		#{field45,jdbcType=VARCHAR},
+		#{field46,jdbcType=VARCHAR}, #{field47,jdbcType=VARCHAR},
+		#{field48,jdbcType=VARCHAR},
+		#{field49,jdbcType=VARCHAR},
+		#{field50,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="com.huaxing.complaints.model.OriNetV600">
+		insert into T_ORI_NET_V600
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="field1 != null">
+				FIELD1,
+			</if>
+			<if test="field2 != null">
+				FIELD2,
+			</if>
+			<if test="field3 != null">
+				FIELD3,
+			</if>
+			<if test="field4 != null">
+				FIELD4,
+			</if>
+			<if test="field5 != null">
+				FIELD5,
+			</if>
+			<if test="field6 != null">
+				FIELD6,
+			</if>
+			<if test="field7 != null">
+				FIELD7,
+			</if>
+			<if test="field8 != null">
+				FIELD8,
+			</if>
+			<if test="field9 != null">
+				FIELD9,
+			</if>
+			<if test="field10 != null">
+				FIELD10,
+			</if>
+			<if test="field11 != null">
+				FIELD11,
+			</if>
+			<if test="field12 != null">
+				FIELD12,
+			</if>
+			<if test="field13 != null">
+				FIELD13,
+			</if>
+			<if test="field14 != null">
+				FIELD14,
+			</if>
+			<if test="field15 != null">
+				FIELD15,
+			</if>
+			<if test="field16 != null">
+				FIELD16,
+			</if>
+			<if test="field17 != null">
+				FIELD17,
+			</if>
+			<if test="field18 != null">
+				FIELD18,
+			</if>
+			<if test="field19 != null">
+				FIELD19,
+			</if>
+			<if test="field20 != null">
+				FIELD20,
+			</if>
+			<if test="field21 != null">
+				FIELD21,
+			</if>
+			<if test="field22 != null">
+				FIELD22,
+			</if>
+			<if test="field23 != null">
+				FIELD23,
+			</if>
+			<if test="field24 != null">
+				FIELD24,
+			</if>
+			<if test="field25 != null">
+				FIELD25,
+			</if>
+			<if test="field26 != null">
+				FIELD26,
+			</if>
+			<if test="field27 != null">
+				FIELD27,
+			</if>
+			<if test="field28 != null">
+				FIELD28,
+			</if>
+			<if test="field29 != null">
+				FIELD29,
+			</if>
+			<if test="field30 != null">
+				FIELD30,
+			</if>
+			<if test="field31 != null">
+				FIELD31,
+			</if>
+			<if test="field32 != null">
+				FIELD32,
+			</if>
+			<if test="field33 != null">
+				FIELD33,
+			</if>
+			<if test="field34 != null">
+				FIELD34,
+			</if>
+			<if test="field35 != null">
+				FIELD35,
+			</if>
+			<if test="field36 != null">
+				FIELD36,
+			</if>
+			<if test="field37 != null">
+				FIELD37,
+			</if>
+			<if test="field38 != null">
+				FIELD38,
+			</if>
+			<if test="field39 != null">
+				FIELD39,
+			</if>
+			<if test="field40 != null">
+				FIELD40,
+			</if>
+			<if test="field41 != null">
+				FIELD41,
+			</if>
+			<if test="field42 != null">
+				FIELD42,
+			</if>
+			<if test="field43 != null">
+				FIELD43,
+			</if>
+			<if test="field44 != null">
+				FIELD44,
+			</if>
+			<if test="field45 != null">
+				FIELD45,
+			</if>
+			<if test="field46 != null">
+				FIELD46,
+			</if>
+			<if test="field47 != null">
+				FIELD47,
+			</if>
+			<if test="field48 != null">
+				FIELD48,
+			</if>
+			<if test="field49 != null">
+				FIELD49,
+			</if>
+			<if test="field50 != null">
+				FIELD50,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="field1 != null">
+				#{field1,jdbcType=VARCHAR},
+			</if>
+			<if test="field2 != null">
+				#{field2,jdbcType=VARCHAR},
+			</if>
+			<if test="field3 != null">
+				#{field3,jdbcType=VARCHAR},
+			</if>
+			<if test="field4 != null">
+				#{field4,jdbcType=VARCHAR},
+			</if>
+			<if test="field5 != null">
+				#{field5,jdbcType=VARCHAR},
+			</if>
+			<if test="field6 != null">
+				#{field6,jdbcType=VARCHAR},
+			</if>
+			<if test="field7 != null">
+				#{field7,jdbcType=VARCHAR},
+			</if>
+			<if test="field8 != null">
+				#{field8,jdbcType=VARCHAR},
+			</if>
+			<if test="field9 != null">
+				#{field9,jdbcType=VARCHAR},
+			</if>
+			<if test="field10 != null">
+				#{field10,jdbcType=VARCHAR},
+			</if>
+			<if test="field11 != null">
+				#{field11,jdbcType=VARCHAR},
+			</if>
+			<if test="field12 != null">
+				#{field12,jdbcType=VARCHAR},
+			</if>
+			<if test="field13 != null">
+				#{field13,jdbcType=VARCHAR},
+			</if>
+			<if test="field14 != null">
+				#{field14,jdbcType=VARCHAR},
+			</if>
+			<if test="field15 != null">
+				#{field15,jdbcType=VARCHAR},
+			</if>
+			<if test="field16 != null">
+				#{field16,jdbcType=VARCHAR},
+			</if>
+			<if test="field17 != null">
+				#{field17,jdbcType=VARCHAR},
+			</if>
+			<if test="field18 != null">
+				#{field18,jdbcType=VARCHAR},
+			</if>
+			<if test="field19 != null">
+				#{field19,jdbcType=VARCHAR},
+			</if>
+			<if test="field20 != null">
+				#{field20,jdbcType=VARCHAR},
+			</if>
+			<if test="field21 != null">
+				#{field21,jdbcType=VARCHAR},
+			</if>
+			<if test="field22 != null">
+				#{field22,jdbcType=VARCHAR},
+			</if>
+			<if test="field23 != null">
+				#{field23,jdbcType=VARCHAR},
+			</if>
+			<if test="field24 != null">
+				#{field24,jdbcType=VARCHAR},
+			</if>
+			<if test="field25 != null">
+				#{field25,jdbcType=VARCHAR},
+			</if>
+			<if test="field26 != null">
+				#{field26,jdbcType=VARCHAR},
+			</if>
+			<if test="field27 != null">
+				#{field27,jdbcType=VARCHAR},
+			</if>
+			<if test="field28 != null">
+				#{field28,jdbcType=VARCHAR},
+			</if>
+			<if test="field29 != null">
+				#{field29,jdbcType=VARCHAR},
+			</if>
+			<if test="field30 != null">
+				#{field30,jdbcType=VARCHAR},
+			</if>
+			<if test="field31 != null">
+				#{field31,jdbcType=VARCHAR},
+			</if>
+			<if test="field32 != null">
+				#{field32,jdbcType=VARCHAR},
+			</if>
+			<if test="field33 != null">
+				#{field33,jdbcType=VARCHAR},
+			</if>
+			<if test="field34 != null">
+				#{field34,jdbcType=VARCHAR},
+			</if>
+			<if test="field35 != null">
+				#{field35,jdbcType=VARCHAR},
+			</if>
+			<if test="field36 != null">
+				#{field36,jdbcType=VARCHAR},
+			</if>
+			<if test="field37 != null">
+				#{field37,jdbcType=VARCHAR},
+			</if>
+			<if test="field38 != null">
+				#{field38,jdbcType=VARCHAR},
+			</if>
+			<if test="field39 != null">
+				#{field39,jdbcType=VARCHAR},
+			</if>
+			<if test="field40 != null">
+				#{field40,jdbcType=VARCHAR},
+			</if>
+			<if test="field41 != null">
+				#{field41,jdbcType=VARCHAR},
+			</if>
+			<if test="field42 != null">
+				#{field42,jdbcType=VARCHAR},
+			</if>
+			<if test="field43 != null">
+				#{field43,jdbcType=VARCHAR},
+			</if>
+			<if test="field44 != null">
+				#{field44,jdbcType=VARCHAR},
+			</if>
+			<if test="field45 != null">
+				#{field45,jdbcType=VARCHAR},
+			</if>
+			<if test="field46 != null">
+				#{field46,jdbcType=VARCHAR},
+			</if>
+			<if test="field47 != null">
+				#{field47,jdbcType=VARCHAR},
+			</if>
+			<if test="field48 != null">
+				#{field48,jdbcType=VARCHAR},
+			</if>
+			<if test="field49 != null">
+				#{field49,jdbcType=VARCHAR},
+			</if>
+			<if test="field50 != null">
+				#{field50,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<sql id="columnList">
+		FIELD0,
+		FIELD1,
+		FIELD2,
+		FIELD3,
+		FIELD4,
+		FIELD5,
+		FIELD6,
+		FIELD7,
+		FIELD8,
+		FIELD9,
+		FIELD10,
+		FIELD11,
+		FIELD12,
+		FIELD13,
+		FIELD14,
+		FIELD15,
+		FIELD16,
+		FIELD17,
+		FIELD18,
+		FIELD19,
+		FIELD20,
+		FIELD21,
+		FIELD22,
+		FIELD23,
+		FIELD24,
+		FIELD25,
+		FIELD26,
+		FIELD27,
+		FIELD28,
+		FIELD29,
+		FIELD30,
+		FIELD31,
+		FIELD32,
+		FIELD33,
+		FIELD34,
+		FIELD35,
+		FIELD36,
+		FIELD37,
+		FIELD38,
+		FIELD39,
+		FIELD40,
+		FIELD41,
+		FIELD42,
+		FIELD43,
+		FIELD44,
+		FIELD45,
+		FIELD46,
+		FIELD47,
+		FIELD48,
+		FIELD49,
+		FIELD50
+	</sql>
+	<sql id="tableName">
+		T_ORI_NET_V600
+	</sql>
+	<select id="selectAll" resultMap="BaseResultMap">
+		select
+		<include refid="columnList" />
+		from
+		<include refid="tableName" />
+	</select>
+	<select id="selectCount" resultType="int">
+		select count(*)
+		from
+		<include refid="tableName" />
+		where 1=1
+		<if test="search1!=null"> 
+		and field27 like '%' || #{search1,jdbcType=VARCHAR} || '%'
+		</if>
+		<if test="search2!=null"> 
+		and field28 like '%' || #{search2,jdbcType=VARCHAR} || '%'
+		</if>
+		<if test="search3!=null"> 
+		and field36 = #{search3,jdbcType=VARCHAR}
+		</if>
+	</select>
+	<select id="selectPaging" resultMap="BaseResultMap">
+		<if test="start!=null and end!=null"> 
+		select c.* from (
+		select a.*, rownum rn from 
+		(
+		</if>
+			SELECT <include refid="columnList" /> FROM <include refid="tableName" /> 
+			where 1=1
+			<if test="search1!=null"> 
+			and field27 like '%' || #{search1,jdbcType=VARCHAR} || '%'
+			</if>
+			<if test="search2!=null"> 
+			and field28 like '%' || #{search2,jdbcType=VARCHAR} || '%'
+			</if>
+			<if test="search3!=null"> 
+			and field36 = #{search3,jdbcType=VARCHAR}
+			</if>
+			ORDER BY FIELD36 desc
+		<if test="start!=null and end!=null"> 
+		)
+		a where #{end,jdbcType=INTEGER} >= rownum) c
+		where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<select id="selectCountsChart" resultType="int">
+		select count(*) from <include refid="tableName" /> t1 where t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36
+		union all 
+		select count(*) from <include refid="tableName" /> t2 where t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36
+		union all 
+		select count(*) from <include refid="tableName" /> t3 where t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36
+		union all 
+		select count(*) from <include refid="tableName" /> t4 where t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36
+	</select>
+	<select id="selectCountsByWeek" resultType="java.util.HashMap">
+		select field1,field2,field3,field4,
+		trunc(field5, 5) as field5,
+		trunc(field6, 5) as field6, 
+		#{startDate2} as field7, 
+		#{endDate2} as field8
+		from (
+		select temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp) ORDER BY field2 desc
+	</select>
+	<sql id="selectAreaCountsByWeekBase">
+		(
+		select * from <include refid="tableName" /> where 1=1 
+		<if test="field20 != null"> 
+		and field20 like '%' || #{field20,jdbcType=VARCHAR} || '%'
+		</if>
+		)
+	</sql>
+	<select id="selectAreaCountsByWeek" resultType="java.util.HashMap">
+		with tempTable as(
+		select field1,field2,field3,field4,
+		trunc(field5, 5) as field5,
+		trunc(field6, 5) as field6, 
+		field7,
+		#{startDate2} as field8, 
+		#{endDate2} as field9
+		 from (
+		select 
+		'江门' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t1 where t1.field41='江门' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t2 where t2.field41='江门' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t3 where t3.field41='江门' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t4 where t4.field41='江门' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'新会' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t1 where t1.field41='新会' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t2 where t2.field41='新会' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t3 where t3.field41='新会' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t4 where t4.field41='新会' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'开平' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t1 where t1.field41='开平' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t2 where t2.field41='开平' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t3 where t3.field41='开平' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t4 where t4.field41='开平' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'台山' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t1 where t1.field41='台山' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t2 where t2.field41='台山' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t3 where t3.field41='台山' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t4 where t4.field41='台山' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'鹤山' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t1 where t1.field41='鹤山' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t2 where t2.field41='鹤山' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t3 where t3.field41='鹤山' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t4 where t4.field41='鹤山' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'恩平' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t1 where t1.field41='恩平' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t2 where t2.field41='恩平' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t3 where t3.field41='恩平' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" /> t4 where t4.field41='恩平' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		) ORDER BY field2 desc
+		)select t.field1, t.field2, t.field3, t.field4, t.field5, t.field6, t.field7, t.field8, t.field9 from tempTable t 
+		UNION ALL
+		select temp.field1,temp.field2,temp.field3,temp.field4,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6, 
+		'总计' as field7, #{startDate2} as field8, #{endDate2} as field9 from (
+			select SUM(field1) as field1, SUM(field2) as field2, SUM(field3) as field3, SUM(field4) as field4 from tempTable
+		) temp
+	</select>
+	<select id="selectOneKeyMonth" resultType="java.util.HashMap">
+		with tempTable as(
+		select field1,field2,field3,field4,
+		trunc(field5, 5) as field5,
+		trunc(field6, 5) as field6, 
+		field7,
+		#{startDate2} as field8, 
+		#{endDate2} as field9
+		 from (
+		select 
+		'江门' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='江门' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='江门' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='江门' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='江门' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'新会' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='新会' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='新会' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='新会' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='新会' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'开平' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='开平' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='开平' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='开平' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='开平' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'台山' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='台山' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='台山' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='台山' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='台山' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'鹤山' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='鹤山' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='鹤山' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='鹤山' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='鹤山' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'恩平' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='恩平' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='恩平' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='恩平' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='恩平' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		) ORDER BY field2 desc
+		)select t.field1, t.field2, t.field3, t.field4, t.field5, t.field6, t.field7, t.field8, t.field9 from tempTable t 
+		UNION ALL
+		select temp.field1,temp.field2,temp.field3,temp.field4,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6, 
+		'总计' as field7, #{startDate2} as field8, #{endDate2} as field9 from (
+			select SUM(field1) as field1, SUM(field2) as field2, SUM(field3) as field3, SUM(field4) as field4 from tempTable
+		) temp
+	</select>
+	<select id="selectLTECountsByWeek" resultType="java.util.HashMap">
+		with tempTable as(
+		select field1,field2,field3,field4,
+		trunc(field5, 5) as field5,
+		trunc(field6, 5) as field6, 
+		field7,
+		#{startDate2} as field8, 
+		#{endDate2} as field9
+		 from (
+		select 
+		'江门' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='江门' and t1.field42 like '%ZL%' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='江门' and t2.field42 like '%ZL%' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='江门' and t3.field42 like '%ZL%' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='江门' and t4.field42 like '%ZL%' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'新会' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='新会' and t1.field42 like '%ZL%' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='新会' and t2.field42 like '%ZL%' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='新会' and t3.field42 like '%ZL%' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='新会' and t4.field42 like '%ZL%' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'开平' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='开平' and t1.field42 like '%ZL%' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='开平' and t2.field42 like '%ZL%' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='开平' and t3.field42 like '%ZL%' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='开平' and t4.field42 like '%ZL%' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'台山' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='台山' and t1.field42 like '%ZL%' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='台山' and t2.field42 like '%ZL%' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='台山' and t3.field42 like '%ZL%' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='台山' and t4.field42 like '%ZL%' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'鹤山' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='鹤山' and t1.field42 like '%ZL%' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='鹤山' and t2.field42 like '%ZL%' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='鹤山' and t3.field42 like '%ZL%' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='鹤山' and t4.field42 like '%ZL%' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		union all
+		select 
+		'恩平' as field7,
+		temp.*,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6
+		from (
+		select 
+		(select count(*)  from <include refid="tableName" /> t1 where t1.field41='恩平' and t1.field42 like '%ZL%' and t1.field36 >= #{startDate1} and #{endDate1}>=t1.field36 )as field1,
+		(select count(*)  from <include refid="tableName" /> t2 where t2.field41='恩平' and t2.field42 like '%ZL%' and t2.field36 >= #{startDate2} and #{endDate2}>=t2.field36 )as field2,
+		(select count(*)  from <include refid="tableName" /> t3 where t3.field41='恩平' and t3.field42 like '%ZL%' and t3.field36 >= #{startDate3} and #{endDate3}>=t3.field36 )as field3,
+		(select count(*)  from <include refid="tableName" /> t4 where t4.field41='恩平' and t4.field42 like '%ZL%' and t4.field36 >= #{startDate4} and #{endDate4}>=t4.field36 )as field4
+		from dual ) temp
+		)
+		)select t.field1, t.field2, t.field3, t.field4, t.field5, t.field6, t.field7, t.field8, t.field9 from tempTable t 
+		UNION ALL
+		select temp.field1,temp.field2,temp.field3,temp.field4,
+		CASE temp.field4 WHEN 0 THEN 0 ELSE (temp.field2-temp.field4)/temp.field4 END as field5, 
+		CASE temp.field1 WHEN 0 THEN 0 ELSE (temp.field2-temp.field1)/temp.field1 END as field6, 
+		'总计' as field7, #{startDate2} as field8, #{endDate2} as field9 from (
+			select SUM(field1) as field1, SUM(field2) as field2, SUM(field3) as field3, SUM(field4) as field4 from tempTable
+		) temp
+	</select>
+	<insert id="insertBatch" parameterType="java.util.List">
+		insert into <include refid="tableName" />
+		( <include refid="columnList" /> )
+		<foreach collection="list" item="item" index="index" separator="union all">
+			select
+			#{item.field0,jdbcType=VARCHAR},
+			#{item.field1,jdbcType=VARCHAR},#{item.field2,jdbcType=VARCHAR},#{item.field3,jdbcType=VARCHAR},#{item.field4,jdbcType=VARCHAR},#{item.field5,jdbcType=VARCHAR},#{item.field6,jdbcType=VARCHAR},#{item.field7,jdbcType=VARCHAR},#{item.field8,jdbcType=VARCHAR},#{item.field9,jdbcType=VARCHAR},#{item.field10,jdbcType=VARCHAR},
+			#{item.field11,jdbcType=VARCHAR},#{item.field12,jdbcType=VARCHAR},#{item.field13,jdbcType=VARCHAR},#{item.field14,jdbcType=VARCHAR},#{item.field15,jdbcType=VARCHAR},#{item.field16,jdbcType=VARCHAR},#{item.field17,jdbcType=VARCHAR},#{item.field18,jdbcType=VARCHAR},#{item.field19,jdbcType=VARCHAR},#{item.field20,jdbcType=VARCHAR},
+			#{item.field21,jdbcType=VARCHAR},#{item.field22,jdbcType=VARCHAR},#{item.field23,jdbcType=VARCHAR},#{item.field24,jdbcType=VARCHAR},#{item.field25,jdbcType=VARCHAR},#{item.field26,jdbcType=VARCHAR},#{item.field27,jdbcType=VARCHAR},#{item.field28,jdbcType=VARCHAR},#{item.field29,jdbcType=VARCHAR},#{item.field30,jdbcType=VARCHAR},
+			#{item.field31,jdbcType=VARCHAR},#{item.field32,jdbcType=VARCHAR},#{item.field33,jdbcType=VARCHAR},#{item.field34,jdbcType=VARCHAR},#{item.field35,jdbcType=VARCHAR},#{item.field36,jdbcType=VARCHAR},#{item.field37,jdbcType=VARCHAR},#{item.field38,jdbcType=VARCHAR},#{item.field39,jdbcType=VARCHAR},#{item.field40,jdbcType=VARCHAR},
+			#{item.field41,jdbcType=VARCHAR},#{item.field42,jdbcType=VARCHAR},#{item.field43,jdbcType=VARCHAR},#{item.field44,jdbcType=VARCHAR},#{item.field45,jdbcType=VARCHAR},#{item.field46,jdbcType=VARCHAR},#{item.field47,jdbcType=VARCHAR},#{item.field48,jdbcType=VARCHAR},#{item.field49,jdbcType=VARCHAR},#{item.field50,jdbcType=VARCHAR}
+			from dual
+		</foreach>
+	</insert>
+	<delete id="deleteBatch" parameterType="java.lang.String">
+		delete from  <include refid="tableName" />
+		<if test="field0List!=null"> 
+			where field0 in 
+			<foreach collection="field0List" item="item" index="index" open="(" separator="," close=")">
+			#{item,jdbcType=VARCHAR}
+			</foreach>
+		</if>
+	</delete>
+	<select id="selectCauseGroup" resultType="java.util.HashMap">
+		<if test="start!=null and end!=null"> 
+		select c.* from (
+		select a.*, rownum rn from 
+		(
+		</if>
+		select t2.*,round(ratio_to_report(benzhoucnt) over(),5) cover 
+		from (
+		<include refid="selectCauseGroupBase" />
+		) t2
+		<if test="start!=null and end!=null"> 
+		)
+		a where #{end,jdbcType=INTEGER} >= rownum) c
+		where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<select id="selectCauseGroupCount" resultType="int">
+		SELECT COUNT(*) FROM (<include refid="selectCauseGroupBase" />)
+	</select>
+	<sql id="selectCauseGroupBase">
+		select #{startDate2}  AS TIMEPERIOD1,
+		#{endDate2} AS TIMEPERIOD2,
+		field20 as tousuyanyin,
+		sum(benzhoucnt) as benzhoucnt,
+		sum(qianzhoucnt) as qianzhoucnt,
+		sum(oldbenzhoucnt) as oldbenzhoucnt,
+		sum(oldqianzhoucnt) as oldqianzhoucnt,
+		round(decode(sum(oldbenzhoucnt),0,0,(sum(benzhoucnt)-sum(oldbenzhoucnt))/sum(oldbenzhoucnt)),5) tongbi,
+		round(decode(sum(qianzhoucnt),0,0,(sum(benzhoucnt)-sum(qianzhoucnt))/sum(qianzhoucnt)),5) huanbi
+		from (
+		select t.field20,
+		count(*) as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate2} and #{endDate2}>=t.field36
+		<if test="field20 != null"> 
+		and t.field20 like '%' || #{field20,jdbcType=VARCHAR} || '%'
+		</if>
+		group by field20
+		union all
+		select t.field20,
+		0 as benzhoucnt,count(*) as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+		<if test="field20 != null"> 
+		and t.field20 like '%' || #{field20,jdbcType=VARCHAR} || '%'
+		</if>
+		group by field20 
+		union all
+		select t.field20,
+		0 as benzhoucnt,0 as qianzhoucnt,count(*) as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate4} and #{endDate4}>=t.field36
+		<if test="field20 != null"> 
+		and t.field20 like '%' || #{field20,jdbcType=VARCHAR} || '%'
+		</if>
+		group by field20
+		union all
+		select t.field20,
+		0 as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,count(*) as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate3} and #{endDate3}>=t.field36
+		<if test="field20 != null"> 
+		and t.field20 like '%' || #{field20,jdbcType=VARCHAR} || '%'
+		</if>
+		group by field20 
+		) t1 group  by field20
+	</sql>
+	<select id="selectCauseGroupLTE" resultType="java.util.HashMap">
+		select t2.*,round(ratio_to_report(benzhoucnt) over(),5) cover 
+		from (
+		<include refid="selectCauseGroupBaseLTE" />
+		) t2
+	</select>
+	<select id="selectCauseGroupCountLTE" resultType="int">
+		SELECT COUNT(*) FROM (<include refid="selectCauseGroupBaseLTE" />)
+	</select>
+	<sql id="selectCauseGroupBaseLTE">
+		select #{startDate2}  AS TIMEPERIOD1,
+		#{endDate2} AS TIMEPERIOD2,
+		field20,
+		sum(benzhoucnt) as benzhoucnt,
+		sum(qianzhoucnt) as qianzhoucnt,
+		sum(oldbenzhoucnt) as oldbenzhoucnt,
+		sum(oldqianzhoucnt) as oldqianzhoucnt,
+		round(decode(sum(oldbenzhoucnt),0,0,(sum(benzhoucnt)-sum(oldbenzhoucnt))/sum(oldbenzhoucnt)),5) tongbi,
+		round(decode(sum(qianzhoucnt),0,0,(sum(benzhoucnt)-sum(qianzhoucnt))/sum(qianzhoucnt)),5) huanbi
+		from (
+		select t.field20,
+		count(*) as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate2} and #{endDate2}>=t.field36 and t.field42 like '%ZL%'
+		group by field20
+		union all
+		select t.field20,
+		0 as benzhoucnt,count(*) as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate1} and #{endDate1}>=t.field36 and t.field42 like '%ZL%'
+		group by field20 
+		union all
+		select t.field20,
+		0 as benzhoucnt,0 as qianzhoucnt,count(*) as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate4} and #{endDate4}>=t.field36 and t.field42 like '%ZL%'
+		group by field20
+		union all
+		select t.field20,
+		0 as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,count(*) as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate3} and #{endDate3}>=t.field36 and t.field42 like '%ZL%'
+		group by field20 
+		) t1 group  by field20
+	</sql>
+	<select id="selectCauseGroupPM" resultType="java.util.HashMap">
+		<if test="start!=null and end!=null"> 
+		select c.* from (
+		select a.*, rownum rn from 
+		(
+		</if>
+			select t2.*,round(ratio_to_report(benzhoucnt) over(),5) cover 
+			from (
+			<include refid="selectCauseGroupBasePM" />
+			) t2
+		<if test="start!=null and end!=null"> 
+		)
+		a where #{end,jdbcType=INTEGER} >= rownum) c
+		where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<select id="selectCauseGroupCountPM" resultType="int">
+		SELECT COUNT(*) FROM (<include refid="selectCauseGroupBasePM" />)
+	</select>
+	<sql id="selectCauseGroupBasePM">
+		select 
+		<if test="startDate2!=null">
+		#{startDate2}  AS TIMEPERIOD1,
+		</if>
+		<if test="endDate2!=null">
+		#{endDate2} AS TIMEPERIOD2,
+		</if>
+		<if test="field41!=null"> 
+		#{field41} AS FIELD41,
+		</if>
+		<if test="field41==null"> 
+		'全区域' AS FIELD41,
+		</if>
+		field20,
+		sum(benzhoucnt) as benzhoucnt,
+		sum(qianzhoucnt) as qianzhoucnt,
+		sum(oldbenzhoucnt) as oldbenzhoucnt,
+		sum(oldqianzhoucnt) as oldqianzhoucnt,
+		round(decode(sum(oldbenzhoucnt),0,0,(sum(benzhoucnt)-sum(oldbenzhoucnt))/sum(oldbenzhoucnt)),5) tongbi,
+		round(decode(sum(qianzhoucnt),0,0,(sum(benzhoucnt)-sum(qianzhoucnt))/sum(qianzhoucnt)),5) huanbi
+		from (
+		select t.field20,
+		count(*) as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 
+		<if test="field41!=null"> 
+		AND t.FIELD41 = #{field41}
+		</if>
+		<if test="startDate2!=null">
+		and t.field36>=#{startDate2} 
+		</if>
+		<if test="endDate2!=null">
+		and #{endDate2}>=t.field36
+		</if>
+		group by field20
+		union all
+		select t.field20,
+		0 as benzhoucnt,count(*) as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1 
+		<if test="field41!=null"> 
+		AND t.FIELD41 = #{field41}
+		</if>
+		<if test="startDate1!=null">
+		and t.field36>=#{startDate1} 
+		</if>
+		<if test="endDate1!=null">
+		and #{endDate1}>=t.field36
+		</if>
+		group by field20 
+		union all
+		select t.field20,
+		0 as benzhoucnt,0 as qianzhoucnt,count(*) as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 
+		<if test="field41!=null"> 
+		AND t.FIELD41 = #{field41}
+		</if>
+		<if test="startDate4!=null">
+		and t.field36>=#{startDate4} 
+		</if>
+		<if test="endDate4!=null">
+		and #{endDate4}>=t.field36
+		</if>
+		group by field20
+		union all
+		select t.field20,
+		0 as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,count(*) as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1  
+		<if test="field41!=null"> 
+		AND t.FIELD41 = #{field41}
+		</if>
+		<if test="startDate3!=null">
+		and t.field36>=#{startDate3} 
+		</if>
+		<if test="endDate3!=null">
+		and #{endDate3}>=t.field36
+		</if>
+		group by field20 
+		) t1 group  by field20
+	</sql>
+	<select id="selectOneKeyChart" resultType="int">
+		<!-- 1 -->
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='江门' <if test="startDate1!=null and endDate1!=null">and field36>=#{startDate1} and #{endDate1}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='新会' <if test="startDate1!=null and endDate1!=null">and field36>=#{startDate1} and #{endDate1}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='开平' <if test="startDate1!=null and endDate1!=null">and field36>=#{startDate1} and #{endDate1}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='台山' <if test="startDate1!=null and endDate1!=null">and field36>=#{startDate1} and #{endDate1}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='鹤山' <if test="startDate1!=null and endDate1!=null">and field36>=#{startDate1} and #{endDate1}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='恩平' <if test="startDate1!=null and endDate1!=null">and field36>=#{startDate1} and #{endDate1}>=field36 </if>) union all
+		<!-- 2 -->
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='江门' <if test="startDate2!=null and endDate2!=null">and field36>=#{startDate2} and #{endDate2}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='新会' <if test="startDate2!=null and endDate2!=null">and field36>=#{startDate2} and #{endDate2}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='开平' <if test="startDate2!=null and endDate2!=null">and field36>=#{startDate2} and #{endDate2}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='台山' <if test="startDate2!=null and endDate2!=null">and field36>=#{startDate2} and #{endDate2}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='鹤山' <if test="startDate2!=null and endDate2!=null">and field36>=#{startDate2} and #{endDate2}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='恩平' <if test="startDate2!=null and endDate2!=null">and field36>=#{startDate2} and #{endDate2}>=field36 </if>) union all
+		<!-- 3 -->
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='江门' <if test="startDate3!=null and endDate3!=null">and field36>=#{startDate3} and #{endDate3}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='新会' <if test="startDate3!=null and endDate3!=null">and field36>=#{startDate3} and #{endDate3}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='开平' <if test="startDate3!=null and endDate3!=null">and field36>=#{startDate3} and #{endDate3}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='台山' <if test="startDate3!=null and endDate3!=null">and field36>=#{startDate3} and #{endDate3}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='鹤山' <if test="startDate3!=null and endDate3!=null">and field36>=#{startDate3} and #{endDate3}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='恩平' <if test="startDate3!=null and endDate3!=null">and field36>=#{startDate3} and #{endDate3}>=field36 </if>) union all
+		<!-- 4 -->
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='江门' <if test="startDate4!=null and endDate4!=null">and field36>=#{startDate4} and #{endDate4}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='新会' <if test="startDate4!=null and endDate4!=null">and field36>=#{startDate4} and #{endDate4}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='开平' <if test="startDate4!=null and endDate4!=null">and field36>=#{startDate4} and #{endDate4}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='台山' <if test="startDate4!=null and endDate4!=null">and field36>=#{startDate4} and #{endDate4}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='鹤山' <if test="startDate4!=null and endDate4!=null">and field36>=#{startDate4} and #{endDate4}>=field36 </if>) union all
+		(select count(*)  from <include refid="selectAreaCountsByWeekBase" />  where field41='恩平' <if test="startDate4!=null and endDate4!=null">and field36>=#{startDate4} and #{endDate4}>=field36 </if>) 
+	</select>
+	<select id="selectCauseGroupLC" resultType="java.util.HashMap">
+		<if test="start!=null and end!=null"> 
+		select c.* from (
+		select a.*, rownum rn from 
+		(
+		</if>
+		select t2.*,round(ratio_to_report(benzhoucnt) over(),5) cover 
+		from (
+		<include refid="selectCauseGroupBaseLC" />
+		) t2
+		<if test="start!=null and end!=null"> 
+		)
+		a where #{end,jdbcType=INTEGER} >= rownum) c
+		where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<select id="selectCauseGroupCountLC" resultType="int">
+		SELECT COUNT(*) FROM (<include refid="selectCauseGroupBaseLC" />)
+	</select>
+	<sql id="selectCauseGroupBaseLC">
+		select #{startDate2}  AS TIMEPERIOD1,
+		#{endDate2} AS TIMEPERIOD2,
+		tousuyanyin,
+		sum(benzhoucnt) as benzhoucnt,
+		sum(qianzhoucnt) as qianzhoucnt,
+		sum(oldbenzhoucnt) as oldbenzhoucnt,
+		sum(oldqianzhoucnt) as oldqianzhoucnt,
+		round(decode(sum(oldbenzhoucnt),0,0,(sum(benzhoucnt)-sum(oldbenzhoucnt))/sum(oldbenzhoucnt)),5) tongbi,
+		round(decode(sum(qianzhoucnt),0,0,(sum(benzhoucnt)-sum(qianzhoucnt))/sum(qianzhoucnt)),5) huanbi
+		from (
+		select t.field20,
+		case 
+			when instr(t.field20,'弱覆盖')>0 then '弱覆盖' 
+			when instr(t.field20,'工程原因')>0 then '工程原因'
+			when instr(t.field20,'设备故障')>0 then '设备故障' 
+			else t.field20 
+		end as tousuyanyin,
+		count(*) as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate2} and #{endDate2}>=t.field36
+		<if test="field42 != null"> 
+		and t.field42 like '%' || #{field42,jdbcType=VARCHAR} || '%'
+		</if>
+		group by field20
+		union all
+		select t.field20,
+		case 
+			when instr(t.field20,'弱覆盖')>0 then '弱覆盖' 
+			when instr(t.field20,'工程原因')>0 then '工程原因'
+			when instr(t.field20,'设备故障')>0 then '设备故障' 
+			else t.field20 
+		end as tousuyanyin,
+		0 as benzhoucnt,count(*) as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+		<if test="field42 != null"> 
+		and t.field42 like '%' || #{field42,jdbcType=VARCHAR} || '%'
+		</if>
+		group by field20 
+		union all
+		select t.field20,
+		case 
+			when instr(t.field20,'弱覆盖')>0 then '弱覆盖' 
+			when instr(t.field20,'工程原因')>0 then '工程原因'
+			when instr(t.field20,'设备故障')>0 then '设备故障' 
+			else t.field20 
+		end as tousuyanyin,
+		0 as benzhoucnt,0 as qianzhoucnt,count(*) as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate4} and #{endDate4}>=t.field36
+		<if test="field42 != null"> 
+		and t.field42 like '%' || #{field42,jdbcType=VARCHAR} || '%'
+		</if>
+		group by field20
+		union all
+		select t.field20,
+		case 
+			when instr(t.field20,'弱覆盖')>0 then '弱覆盖' 
+			when instr(t.field20,'工程原因')>0 then '工程原因'
+			when instr(t.field20,'设备故障')>0 then '设备故障' 
+			else t.field20 
+		end as tousuyanyin,
+		0 as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,count(*) as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1 and t.field36>=#{startDate3} and #{endDate3}>=t.field36
+		<if test="field42 != null"> 
+		and t.field42 like '%' || #{field42,jdbcType=VARCHAR} || '%'
+		</if>
+		group by field20 
+		) t1 group  by tousuyanyin
+	</sql>
+	<select id="selectWeakCoverage" resultType="java.util.HashMap">
+		<if test="start!=null and end!=null"> 
+		select c.* from (
+		select a.*, rownum rn from 
+		(
+		</if>
+			select t2.*,round(ratio_to_report(benzhoucnt) over(),5) cover 
+			from (
+			<include refid="selectWeakCoverageBase" />
+			) t2
+		<if test="start!=null and end!=null"> 
+		)
+		a where #{end,jdbcType=INTEGER} >= rownum) c
+		where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<select id="selectWeakCoverageCount" resultType="int">
+		SELECT COUNT(*) FROM (<include refid="selectWeakCoverageBase" />)
+	</select>
+	<sql id="selectWeakCoverageBase">
+		select 
+		<if test="startDate2!=null">
+		#{startDate2}  AS TIMEPERIOD1,
+		</if>
+		<if test="endDate2!=null">
+		#{endDate2} AS TIMEPERIOD2,
+		</if>
+		field20 as tousuyanyin,
+		sum(benzhoucnt) as benzhoucnt,
+		sum(qianzhoucnt) as qianzhoucnt,
+		sum(oldbenzhoucnt) as oldbenzhoucnt,
+		sum(oldqianzhoucnt) as oldqianzhoucnt,
+		round(decode(sum(oldbenzhoucnt),0,0,(sum(benzhoucnt)-sum(oldbenzhoucnt))/sum(oldbenzhoucnt)),5) tongbi,
+		round(decode(sum(qianzhoucnt),0,0,(sum(benzhoucnt)-sum(qianzhoucnt))/sum(qianzhoucnt)),5) huanbi
+		from (
+		select t.FIELD20,
+		count(*) as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 
+		<if test="startDate2!=null">
+		and t.field36>=#{startDate2} 
+		</if>
+		<if test="endDate2!=null">
+		and #{endDate2}>=t.field36
+		</if>
+		<if test="field20!='other'">
+		and FIELD20 in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖')
+		</if>
+		<if test="field20=='other'">
+		and FIELD20 not in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖','测试正常（客户原因）')
+		</if>
+		group by FIELD20
+		union all
+		select t.FIELD20,
+		0 as benzhoucnt,count(*) as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1 
+		<if test="startDate1!=null">
+		and t.field36>=#{startDate1} 
+		</if>
+		<if test="endDate1!=null">
+		and #{endDate1}>=t.field36
+		</if>
+		<if test="field20!='other'">
+		and FIELD20 in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖')
+		</if>
+		<if test="field20=='other'">
+		and FIELD20 not in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖','测试正常（客户原因）')
+		</if>
+		group by FIELD20
+		union all
+		select t.FIELD20,
+		0 as benzhoucnt,0 as qianzhoucnt,count(*) as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 
+		<if test="startDate4!=null">
+		and t.field36>=#{startDate4} 
+		</if>
+		<if test="endDate4!=null">
+		and #{endDate4}>=t.field36
+		</if>
+		<if test="field20!='other'">
+		and FIELD20 in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖')
+		</if>
+		<if test="field20=='other'">
+		and FIELD20 not in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖','测试正常（客户原因）')
+		</if>
+		group by FIELD20
+		union all
+		select t.FIELD20,
+		0 as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,count(*) as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1  
+		<if test="startDate3!=null">
+		and t.field36>=#{startDate3} 
+		</if>
+		<if test="endDate3!=null">
+		and #{endDate3}>=t.field36
+		</if>
+		<if test="field20!='other'">
+		and FIELD20 in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖')
+		</if>
+		<if test="field20=='other'">
+		and FIELD20 not in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖','测试正常（客户原因）')
+		</if>
+		group by FIELD20
+		) t1 group  by FIELD20
+	</sql>
+	<select id="selectWeakCoverageCity" resultType="java.util.HashMap">
+		<if test="start!=null and end!=null"> 
+		select c.* from (
+		select a.*, rownum rn from 
+		(
+		</if>
+			select t2.*,round(ratio_to_report(benzhoucnt) over(),5) cover 
+			from (
+			<include refid="selectWeakCoverageCityBase" />
+			) t2
+		<if test="start!=null and end!=null"> 
+		)
+		a where #{end,jdbcType=INTEGER} >= rownum) c
+		where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<select id="selectWeakCoverageCityCount" resultType="int">
+		SELECT COUNT(*) FROM (<include refid="selectWeakCoverageCityBase" />)
+	</select>
+	<sql id="selectWeakCoverageCityBase">
+		select 
+		<if test="startDate2!=null">
+		#{startDate2}  AS TIMEPERIOD1,
+		</if>
+		<if test="endDate2!=null">
+		#{endDate2} AS TIMEPERIOD2,
+		</if>
+		field41,
+		sum(benzhoucnt) as benzhoucnt,
+		sum(qianzhoucnt) as qianzhoucnt,
+		sum(oldbenzhoucnt) as oldbenzhoucnt,
+		sum(oldqianzhoucnt) as oldqianzhoucnt,
+		round(decode(sum(oldbenzhoucnt),0,0,(sum(benzhoucnt)-sum(oldbenzhoucnt))/sum(oldbenzhoucnt)),5) tongbi,
+		round(decode(sum(qianzhoucnt),0,0,(sum(benzhoucnt)-sum(qianzhoucnt))/sum(qianzhoucnt)),5) huanbi
+		from (
+		select t.field41,
+		count(*) as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 
+		<if test="startDate2!=null">
+		and t.field36>=#{startDate2} 
+		</if>
+		<if test="endDate2!=null">
+		and #{endDate2}>=t.field36
+		</if>
+		and FIELD20 in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖')
+		group by field41
+		union all
+		select t.field41,
+		0 as benzhoucnt,count(*) as qianzhoucnt,0 as oldbenzhoucnt,0 as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1 
+		<if test="startDate1!=null">
+		and t.field36>=#{startDate1} 
+		</if>
+		<if test="endDate1!=null">
+		and #{endDate1}>=t.field36
+		</if>
+		and FIELD20 in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖')
+		group by field41
+		union all
+		select t.field41,
+		0 as benzhoucnt,0 as qianzhoucnt,count(*) as oldbenzhoucnt,0 as oldqianzhoucnt  from t_ori_net_v600 t 
+		where 1=1 
+		<if test="startDate4!=null">
+		and t.field36>=#{startDate4} 
+		</if>
+		<if test="endDate4!=null">
+		and #{endDate4}>=t.field36
+		</if>
+		and FIELD20 in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖')
+		group by field41
+		union all
+		select t.field41,
+		0 as benzhoucnt,0 as qianzhoucnt,0 as oldbenzhoucnt,count(*) as oldqianzhoucnt from t_ori_net_v600 t 
+		where 1=1  
+		<if test="startDate3!=null">
+		and t.field36>=#{startDate3} 
+		</if>
+		<if test="endDate3!=null">
+		and #{endDate3}>=t.field36
+		</if>
+		and FIELD20 in ('GSM弱覆盖','LTE弱覆盖','TD弱覆盖')
+		group by field41
+		) t1 group  by field41
+	</sql>
+</mapper>

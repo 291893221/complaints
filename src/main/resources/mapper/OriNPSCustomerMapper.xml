@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huaxing.complaints.dao.OriNPSCustomerMapper" >
+  <resultMap id="BaseResultMap" type="com.huaxing.complaints.model.OriNPSCustomer" >
+    <result column="FIELD0" property="field0" jdbcType="VARCHAR" />
+    <result column="FIELD1" property="field1" jdbcType="VARCHAR" />
+    <result column="FIELD2" property="field2" jdbcType="VARCHAR" />
+    <result column="FIELD3" property="field3" jdbcType="VARCHAR" />
+    <result column="FIELD4" property="field4" jdbcType="VARCHAR" />
+    <result column="FIELD5" property="field5" jdbcType="VARCHAR" />
+    <result column="FIELD6" property="field6" jdbcType="VARCHAR" />
+    <result column="FIELD7" property="field7" jdbcType="VARCHAR" />
+    <result column="FIELD8" property="field8" jdbcType="VARCHAR" />
+    <result column="FIELD9" property="field9" jdbcType="VARCHAR" />
+    <result column="FIELD10" property="field10" jdbcType="VARCHAR" />
+    <result column="FIELD11" property="field11" jdbcType="VARCHAR" />
+    <result column="FIELD12" property="field12" jdbcType="VARCHAR" />
+    <result column="FIELD13" property="field13" jdbcType="VARCHAR" />
+    <result column="FIELD14" property="field14" jdbcType="VARCHAR" />
+    <result column="FIELD15" property="field15" jdbcType="VARCHAR" />
+    <result column="FIELD16" property="field16" jdbcType="VARCHAR" />
+    <result column="FIELD17" property="field17" jdbcType="VARCHAR" />
+    <result column="FIELD18" property="field18" jdbcType="VARCHAR" />
+    <result column="FIELD19" property="field19" jdbcType="VARCHAR" />
+    <result column="FIELD20" property="field20" jdbcType="VARCHAR" />
+    <result column="FIELD21" property="field21" jdbcType="VARCHAR" />
+    <result column="FIELD22" property="field22" jdbcType="VARCHAR" />
+    <result column="FIELD23" property="field23" jdbcType="VARCHAR" />
+    <result column="FIELD24" property="field24" jdbcType="VARCHAR" />
+    <result column="FIELD25" property="field25" jdbcType="VARCHAR" />
+    <result column="FIELD26" property="field26" jdbcType="VARCHAR" />
+    <result column="FIELD27" property="field27" jdbcType="VARCHAR" />
+    <result column="FIELD28" property="field28" jdbcType="VARCHAR" />
+    <result column="FIELD29" property="field29" jdbcType="VARCHAR" />
+    <result column="FIELD30" property="field30" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.huaxing.complaints.model.OriNPSCustomer" >
+    insert into T_ORI_NPS_CUSTOMER (FIELD1, FIELD2, FIELD3, 
+      FIELD4, FIELD5, FIELD6, 
+      FIELD7, FIELD8, FIELD9, 
+      FIELD10, FIELD11, FIELD12, 
+      FIELD13, FIELD14, FIELD15, 
+      FIELD16, FIELD17, FIELD18, 
+      FIELD19, FIELD20, FIELD21, 
+      FIELD22, FIELD23, FIELD24, 
+      FIELD25, FIELD26, FIELD27, 
+      FIELD28, FIELD29, FIELD30
+      )
+    values (#{field1,jdbcType=VARCHAR}, #{field2,jdbcType=VARCHAR}, #{field3,jdbcType=VARCHAR}, 
+      #{field4,jdbcType=VARCHAR}, #{field5,jdbcType=VARCHAR}, #{field6,jdbcType=VARCHAR}, 
+      #{field7,jdbcType=VARCHAR}, #{field8,jdbcType=VARCHAR}, #{field9,jdbcType=VARCHAR}, 
+      #{field10,jdbcType=VARCHAR}, #{field11,jdbcType=VARCHAR}, #{field12,jdbcType=VARCHAR}, 
+      #{field13,jdbcType=VARCHAR}, #{field14,jdbcType=VARCHAR}, #{field15,jdbcType=VARCHAR}, 
+      #{field16,jdbcType=VARCHAR}, #{field17,jdbcType=VARCHAR}, #{field18,jdbcType=VARCHAR}, 
+      #{field19,jdbcType=VARCHAR}, #{field20,jdbcType=VARCHAR}, #{field21,jdbcType=VARCHAR}, 
+      #{field22,jdbcType=VARCHAR}, #{field23,jdbcType=VARCHAR}, #{field24,jdbcType=VARCHAR}, 
+      #{field25,jdbcType=VARCHAR}, #{field26,jdbcType=VARCHAR}, #{field27,jdbcType=VARCHAR}, 
+      #{field28,jdbcType=VARCHAR}, #{field29,jdbcType=VARCHAR}, #{field30,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.huaxing.complaints.model.OriNPSCustomer" >
+    insert into T_ORI_NPS_CUSTOMER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="field1 != null" >
+        FIELD1,
+      </if>
+      <if test="field2 != null" >
+        FIELD2,
+      </if>
+      <if test="field3 != null" >
+        FIELD3,
+      </if>
+      <if test="field4 != null" >
+        FIELD4,
+      </if>
+      <if test="field5 != null" >
+        FIELD5,
+      </if>
+      <if test="field6 != null" >
+        FIELD6,
+      </if>
+      <if test="field7 != null" >
+        FIELD7,
+      </if>
+      <if test="field8 != null" >
+        FIELD8,
+      </if>
+      <if test="field9 != null" >
+        FIELD9,
+      </if>
+      <if test="field10 != null" >
+        FIELD10,
+      </if>
+      <if test="field11 != null" >
+        FIELD11,
+      </if>
+      <if test="field12 != null" >
+        FIELD12,
+      </if>
+      <if test="field13 != null" >
+        FIELD13,
+      </if>
+      <if test="field14 != null" >
+        FIELD14,
+      </if>
+      <if test="field15 != null" >
+        FIELD15,
+      </if>
+      <if test="field16 != null" >
+        FIELD16,
+      </if>
+      <if test="field17 != null" >
+        FIELD17,
+      </if>
+      <if test="field18 != null" >
+        FIELD18,
+      </if>
+      <if test="field19 != null" >
+        FIELD19,
+      </if>
+      <if test="field20 != null" >
+        FIELD20,
+      </if>
+      <if test="field21 != null" >
+        FIELD21,
+      </if>
+      <if test="field22 != null" >
+        FIELD22,
+      </if>
+      <if test="field23 != null" >
+        FIELD23,
+      </if>
+      <if test="field24 != null" >
+        FIELD24,
+      </if>
+      <if test="field25 != null" >
+        FIELD25,
+      </if>
+      <if test="field26 != null" >
+        FIELD26,
+      </if>
+      <if test="field27 != null" >
+        FIELD27,
+      </if>
+      <if test="field28 != null" >
+        FIELD28,
+      </if>
+      <if test="field29 != null" >
+        FIELD29,
+      </if>
+      <if test="field30 != null" >
+        FIELD30,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="field1 != null" >
+        #{field1,jdbcType=VARCHAR},
+      </if>
+      <if test="field2 != null" >
+        #{field2,jdbcType=VARCHAR},
+      </if>
+      <if test="field3 != null" >
+        #{field3,jdbcType=VARCHAR},
+      </if>
+      <if test="field4 != null" >
+        #{field4,jdbcType=VARCHAR},
+      </if>
+      <if test="field5 != null" >
+        #{field5,jdbcType=VARCHAR},
+      </if>
+      <if test="field6 != null" >
+        #{field6,jdbcType=VARCHAR},
+      </if>
+      <if test="field7 != null" >
+        #{field7,jdbcType=VARCHAR},
+      </if>
+      <if test="field8 != null" >
+        #{field8,jdbcType=VARCHAR},
+      </if>
+      <if test="field9 != null" >
+        #{field9,jdbcType=VARCHAR},
+      </if>
+      <if test="field10 != null" >
+        #{field10,jdbcType=VARCHAR},
+      </if>
+      <if test="field11 != null" >
+        #{field11,jdbcType=VARCHAR},
+      </if>
+      <if test="field12 != null" >
+        #{field12,jdbcType=VARCHAR},
+      </if>
+      <if test="field13 != null" >
+        #{field13,jdbcType=VARCHAR},
+      </if>
+      <if test="field14 != null" >
+        #{field14,jdbcType=VARCHAR},
+      </if>
+      <if test="field15 != null" >
+        #{field15,jdbcType=VARCHAR},
+      </if>
+      <if test="field16 != null" >
+        #{field16,jdbcType=VARCHAR},
+      </if>
+      <if test="field17 != null" >
+        #{field17,jdbcType=VARCHAR},
+      </if>
+      <if test="field18 != null" >
+        #{field18,jdbcType=VARCHAR},
+      </if>
+      <if test="field19 != null" >
+        #{field19,jdbcType=VARCHAR},
+      </if>
+      <if test="field20 != null" >
+        #{field20,jdbcType=VARCHAR},
+      </if>
+      <if test="field21 != null" >
+        #{field21,jdbcType=VARCHAR},
+      </if>
+      <if test="field22 != null" >
+        #{field22,jdbcType=VARCHAR},
+      </if>
+      <if test="field23 != null" >
+        #{field23,jdbcType=VARCHAR},
+      </if>
+      <if test="field24 != null" >
+        #{field24,jdbcType=VARCHAR},
+      </if>
+      <if test="field25 != null" >
+        #{field25,jdbcType=VARCHAR},
+      </if>
+      <if test="field26 != null" >
+        #{field26,jdbcType=VARCHAR},
+      </if>
+      <if test="field27 != null" >
+        #{field27,jdbcType=VARCHAR},
+      </if>
+      <if test="field28 != null" >
+        #{field28,jdbcType=VARCHAR},
+      </if>
+      <if test="field29 != null" >
+        #{field29,jdbcType=VARCHAR},
+      </if>
+      <if test="field30 != null" >
+        #{field30,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <sql id="columnList">
+		FIELD0,
+		FIELD1,
+		FIELD2,
+		FIELD3,
+		FIELD4,
+		FIELD5,
+		FIELD6,
+		FIELD7,
+		FIELD8,
+		FIELD9,
+		FIELD10,
+		FIELD11,
+		FIELD12,
+		FIELD13,
+		FIELD14,
+		FIELD15,
+		FIELD16,
+		FIELD17,
+		FIELD18,
+		FIELD19,
+		FIELD20,
+		FIELD21,
+		FIELD22,
+		FIELD23,
+		FIELD24,
+		FIELD25,
+		FIELD26,
+		FIELD27,
+		FIELD28,
+		FIELD29,
+		FIELD30
+	</sql>
+	<sql id="tableName">
+		t_ori_nps_customer
+	</sql>
+	<select id="selectAll" resultMap="BaseResultMap">
+		select
+		<include refid="columnList" />
+		from
+		<include refid="tableName" />
+	</select>
+	<select id="selectCount" resultType="int">
+		select count(*)
+		from
+		<include refid="tableName" />
+		where 1=1
+		<if test="search1!=null"> 
+		and field1 like '%' || #{search1,jdbcType=VARCHAR} || '%'
+		</if>
+		<if test="search2!=null"> 
+		and field2 like '%' || #{search2,jdbcType=VARCHAR} || '%'
+		</if>
+		<if test="search3!=null"> 
+		and field7 = #{search3,jdbcType=VARCHAR}
+		</if>
+	</select>
+	<select id="selectPaging" resultMap="BaseResultMap">
+		<if test="start!=null and end!=null"> 
+		select c.* from (
+		select a.*, rownum rn from 
+		(
+		</if>
+			SELECT <include refid="columnList" /> FROM <include refid="tableName" /> 
+			where 1=1
+			<if test="search1!=null"> 
+			and field1 like '%' || #{search1,jdbcType=VARCHAR} || '%'
+			</if>
+			<if test="search2!=null"> 
+			and field2 like '%' || #{search2,jdbcType=VARCHAR} || '%'
+			</if>
+			<if test="search3!=null"> 
+			and field7 = #{search3,jdbcType=VARCHAR}
+			</if>
+		<if test="start!=null and end!=null"> 
+		)
+		a where #{end,jdbcType=INTEGER} >= rownum) c
+		where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<insert id="insertBatch" parameterType="java.util.List">
+		insert into <include refid="tableName" />
+		( <include refid="columnList" /> )
+		<foreach collection="list" item="item" index="index" separator="union all">
+			select
+			#{item.field0,jdbcType=VARCHAR},
+			#{item.field1,jdbcType=VARCHAR},#{item.field2,jdbcType=VARCHAR},#{item.field3,jdbcType=VARCHAR},#{item.field4,jdbcType=VARCHAR},#{item.field5,jdbcType=VARCHAR},#{item.field6,jdbcType=VARCHAR},#{item.field7,jdbcType=VARCHAR},#{item.field8,jdbcType=VARCHAR},#{item.field9,jdbcType=VARCHAR},#{item.field10,jdbcType=VARCHAR},
+			#{item.field11,jdbcType=VARCHAR},#{item.field12,jdbcType=VARCHAR},#{item.field13,jdbcType=VARCHAR},#{item.field14,jdbcType=VARCHAR},#{item.field15,jdbcType=VARCHAR},#{item.field16,jdbcType=VARCHAR},#{item.field17,jdbcType=VARCHAR},#{item.field18,jdbcType=VARCHAR},#{item.field19,jdbcType=VARCHAR},#{item.field20,jdbcType=VARCHAR},
+			#{item.field21,jdbcType=VARCHAR},#{item.field22,jdbcType=VARCHAR},#{item.field23,jdbcType=VARCHAR},#{item.field24,jdbcType=VARCHAR},#{item.field25,jdbcType=VARCHAR},#{item.field26,jdbcType=VARCHAR},#{item.field27,jdbcType=VARCHAR},#{item.field28,jdbcType=VARCHAR},#{item.field29,jdbcType=VARCHAR},#{item.field30,jdbcType=VARCHAR}
+			from dual
+		</foreach>
+	</insert>
+	<delete id="deleteBatch" parameterType="java.lang.String">
+		delete from  <include refid="tableName" />
+		<if test="field0List!=null"> 
+			where field0 in 
+			<foreach collection="field0List" item="item" index="index" open="(" separator="," close=")">
+			#{item,jdbcType=VARCHAR}
+			</foreach>
+		</if>
+	</delete>
+</mapper>

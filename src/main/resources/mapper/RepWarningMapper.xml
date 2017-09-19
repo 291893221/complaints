@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huaxing.complaints.dao.RepWarningMapper">
+	<resultMap id="BaseResultMap" type="com.huaxing.complaints.model.RepWarning">
+		<result column="FIELD18" property="field18" jdbcType="VARCHAR" />
+		<result column="FIELD20" property="field20" jdbcType="VARCHAR" />
+		<result column="FIELD21" property="field21" jdbcType="VARCHAR" />
+		<result column="FIELD22" property="field22" jdbcType="VARCHAR" />
+		<result column="FIELD23" property="field23" jdbcType="VARCHAR" />
+		<result column="FIELD24" property="field24" jdbcType="VARCHAR" />
+		<result column="FIELD25" property="field25" jdbcType="VARCHAR" />
+		<result column="FIELD26" property="field26" jdbcType="VARCHAR" />
+		<result column="FIELD27" property="field27" jdbcType="VARCHAR" />
+		<result column="FIELD28" property="field28" jdbcType="VARCHAR" />
+		<result column="FIELD29" property="field29" jdbcType="VARCHAR" />
+		<result column="FIELD32" property="field32" jdbcType="VARCHAR" />
+		<result column="BLACKDOT" property="blackdot" jdbcType="CHAR" />
+		<result column="FIELD34" property="field34" jdbcType="VARCHAR" />
+		<result column="FIELD35" property="field35" jdbcType="VARCHAR" />
+		<result column="FIELD36" property="field36" jdbcType="VARCHAR" />
+		<result column="FIELD38" property="field38" jdbcType="VARCHAR" />
+		<result column="FIELD39" property="field39" jdbcType="VARCHAR" />
+		<result column="FIELD40" property="field40" jdbcType="VARCHAR" />
+		<result column="FIELD41" property="field41" jdbcType="VARCHAR" />
+		<result column="FIELD42" property="field42" jdbcType="VARCHAR" />
+		<result column="CHANGJING" property="changjing" jdbcType="VARCHAR" />
+		<result column="FIELD43" property="field43" jdbcType="VARCHAR" />
+		<result column="FIELD44" property="field44" jdbcType="VARCHAR" />
+		<result column="FIELD47" property="field47" jdbcType="VARCHAR" />
+		<result column="FIELD48" property="field48" jdbcType="VARCHAR" />
+		<result column="FIELD45" property="field45" jdbcType="VARCHAR" />
+		<result column="FIELD50" property="field50" jdbcType="VARCHAR" />
+		<result column="HUAWULIANG" property="huawuliang" jdbcType="VARCHAR" />
+		<result column="LIULIANG" property="liuliang" jdbcType="VARCHAR" />
+		<result column="ISNPS" property="isnps" jdbcType="VARCHAR" />
+		<result column="ISMARKET" property="ismarket" jdbcType="VARCHAR" />
+	</resultMap>
+	<select id="getRepWarningCell" resultType="java.util.HashMap">
+		<if test="start!=null and end!=null"> 
+		select c.* from (
+		select a.*, rownum rn from 
+		(
+		</if>
+			SELECT t1.newcount,t1.oldcount,t2.* FROM 
+			(
+			select *
+			  from (select t.field42,
+			               sum(t.newcount) as newcount,
+			               sum(t.oldcount) as oldcount
+			          from (select t.field42, 1 as newcount, 0 as oldcount
+			                  from v_rep_warning t
+			                 where 1 = 1
+			                   <if test="startDate1 != null and endDate1 != null">
+								and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+								</if>
+								<if test="field30 != null"> 
+								and t.field30 = #{field30}
+								</if>
+			                union all
+			                select t.field42, 0 as newcount, 1 as oldcount
+			                  from v_rep_warning t
+			                 where 1 = 1
+			                   <if test="startDate2 != null and endDate2 != null">
+						        and t.field36>=#{startDate2} and #{endDate2}>=t.field36
+						        </if>
+						        <if test="field30 != null"> 
+								and t.field30 = #{field30}
+								</if>
+			                   ) t
+			         group by t.field42)
+			 where newcount >= 2 and field42 is not null
+			)t1
+			LEFT join 
+			(
+			select field42,min(FIELD18) FIELD18,min(FIELD20) FIELD20,min(FIELD21) FIELD21,min(FIELD22) FIELD22,min(FIELD23) FIELD23,min(FIELD24) FIELD24,min(FIELD25) FIELD25,min(FIELD26) FIELD26,min(FIELD27) FIELD27,min(FIELD28) FIELD28,min(FIELD29) FIELD29,min(FIELD32) FIELD32,min(BLACKDOT) BLACKDOT,min(FIELD30) FIELD30,min(FIELD34) FIELD34,min(FIELD35) FIELD35,min(FIELD36) FIELD36,min(FIELD38) FIELD38,min(FIELD39) FIELD39,min(FIELD40) FIELD40,min(FIELD41) FIELD41,min(CHANGJING) CHANGJING,min(FIELD43) FIELD43,min(FIELD44) FIELD44,min(FIELD47) FIELD47,min(FIELD48) FIELD48,min(FIELD45) FIELD45,min(FIELD50) FIELD50,min(HUAWULIANG) HUAWULIANG,min(LIULIANG) LIULIANG,min(ISNPS) ISNPS,min(ISMARKET) ISMARKET
+			from v_rep_warning t
+			where 1 = 1
+			<if test="startDate1 != null and endDate1 != null">
+	        and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+	        </if>
+	        <if test="field30 != null"> 
+			and t.field30 = #{field30}
+			</if>
+			GROUP BY field42
+			)t2  
+			on t1.field42 = t2.field42
+		<if test="start!=null and end!=null"> 
+		)
+		a where #{end,jdbcType=INTEGER} >= rownum) c
+		where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<select id="getRepWarningCellCount" resultType="int">
+		select count(*) from 
+		(
+			select count(field42) ct from v_rep_warning 
+			WHERE 1=1
+			<if test="startDate1 != null and endDate1 != null">
+	        and field36>=#{startDate1} and #{endDate1}>=field36
+	        </if>
+	        <if test="field30 != null"> 
+			and field30 = #{field30}
+			</if>
+			group by field42
+		)
+		where ct >= 2
+	</select>
+	<select id="getRepWarningPhone" resultType="java.util.HashMap">
+		<if test="start!=null and end!=null"> 
+		select c.* from (
+		select a.*, rownum rn from 
+		(
+		</if>
+			SELECT t1.newcount,t1.oldcount,t2.* FROM (
+			SELECT * FROM (
+			select t.field28, sum(t.newcount) as newcount, sum(t.oldcount) as oldcount
+			  from (select t.field28, 1 as newcount, 0 as oldcount
+			          from v_rep_warning t
+			         where 1 = 1
+					<if test="startDate1 != null and endDate1 != null">
+			        and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+			        </if>
+			        <if test="field30 != null"> 
+					and t.field30 = #{field30}
+					</if>
+			        union all
+			        select t.field28, 0 as newcount, 1 as oldcount
+			          from v_rep_warning t
+			         where 1 = 1
+					<if test="startDate2 != null and endDate2 != null">
+			        and t.field36>=#{startDate2} and #{endDate2}>=t.field36
+			        </if>
+			        <if test="field30 != null"> 
+					and t.field30 = #{field30}
+					</if>
+					) t
+			 group by t.field28
+			)WHERE newcount>=2 and field28 IS NOT null
+			) t1
+			LEFT join 
+			(
+			select field28,min(FIELD18) FIELD18,min(FIELD20) FIELD20,min(FIELD21) FIELD21,min(FIELD22) FIELD22,min(FIELD23) FIELD23,min(FIELD24) FIELD24,min(FIELD25) FIELD25,min(FIELD26) FIELD26,min(FIELD27) FIELD27,min(field42) field42,min(FIELD29) FIELD29,min(FIELD32) FIELD32,min(BLACKDOT) BLACKDOT,min(FIELD30) FIELD30,min(FIELD34) FIELD34,min(FIELD35) FIELD35,min(FIELD36) FIELD36,min(FIELD38) FIELD38,min(FIELD39) FIELD39,min(FIELD40) FIELD40,min(FIELD41) FIELD41,min(CHANGJING) CHANGJING,min(FIELD43) FIELD43,min(FIELD44) FIELD44,min(FIELD47) FIELD47,min(FIELD48) FIELD48,min(FIELD45) FIELD45,min(FIELD50) FIELD50,min(HUAWULIANG) HUAWULIANG,min(LIULIANG) LIULIANG,min(ISNPS) ISNPS,min(ISMARKET) ISMARKET
+			FROM v_rep_warning t
+			WHERE 1 = 1
+			<if test="startDate1 != null and endDate1 != null">
+	        and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+	        </if>
+	        <if test="field30 != null"> 
+			and t.field30 = #{field30}
+			</if>
+			GROUP BY field28
+			) t2
+			ON t1.FIELD28=t2.FIELD28
+		<if test="start!=null and end!=null"> 
+		)
+		a where #{end,jdbcType=INTEGER} >= rownum) c
+		where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<select id="getRepWarningPhoneCount" resultType="int">
+		select count(*) from 
+		(
+			select count(field28) ct from v_rep_warning 
+			WHERE 1=1
+			<if test="startDate1 != null and endDate1 != null">
+	        and field36>=#{startDate1} and #{endDate1}>=field36
+	        </if>
+	        <if test="field30 != null"> 
+			and field30 = #{field30}
+			</if>
+			group by field28
+		)
+		where ct >= 2
+	</select>
+	<sql id="tableName">
+		V_REP_WARNING
+	</sql>
+	<select id="getRepWarningBlackDot" resultType="java.util.HashMap">
+		select t1.*,
+		t2.newcount,
+		t2.oldcount
+		from 
+		(
+			select  t.* from <include refid="tableName" /> t 
+			where 1=1 and t.field36>=#{startDate1} and #{endDate1}>=t.field36 and t.blackdot='是'
+		) t1 
+		left join 
+		(
+		    select t.FIELD40,sum(t.newcount) as newcount,sum(t.oldcount) as oldcount from 
+		    (
+		        select t.FIELD40,1 as newcount,0 as oldcount  from <include refid="tableName" /> t 
+		        where 1=1 and t.field36>=#{startDate1} and #{endDate1}>=t.field36 and t.blackdot='是'
+		        union all
+		        select t.FIELD40,0 as  newcount,1 as oldcount from <include refid="tableName" /> t 
+		        where 1=1 and t.field36>=#{startDate2} and #{endDate2}>=t.field36 and t.blackdot='是'
+		    ) t
+		    group by t.FIELD40
+		) t2 
+		on t1.FIELD40=t2.FIELD40
+	</select>
+	<select id="getRepWarningBlackDotCount" resultType="int">
+		SELECT COUNT(*) FROM (
+			select  t.* from <include refid="tableName" /> t 
+			where 1=1 and t.field36>=#{startDate1} and #{endDate1}>=t.field36 and t.blackdot='是'
+		)
+	</select>
+	<select id="getRepWarningHotPoint" resultType="java.util.HashMap">
+		select t1.*,
+		t2.newcount,
+		t2.oldcount
+		from 
+		(
+			select  t.* from <include refid="tableName" /> t 
+			where 1=1 and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+		) t1 
+		left join 
+		(
+		    select t.FIELD39,sum(t.newcount) as newcount,sum(t.oldcount) as oldcount from 
+		    (
+		        select t.FIELD39,1 as newcount,0 as oldcount  from <include refid="tableName" /> t 
+		        where 1=1 and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+		        union all
+		        select t.FIELD39,0 as  newcount,1 as oldcount from <include refid="tableName" /> t 
+		        where 1=1 and t.field36>=#{startDate2} and #{endDate2}>=t.field36
+		    ) t
+		    group by t.FIELD39
+		) t2 
+		on t1.FIELD39=t2.FIELD39 where  t2.newcount>=5	
+	</select>
+	<select id="getRepWarningHotPointCount" resultType="int">
+		SELECT COUNT(*) FROM (
+			select  t.* from <include refid="tableName" /> t 
+			where 1=1 and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+		)
+	</select>
+	<select id="getRepWarningDetail" resultType="java.util.HashMap">
+		<if test="start!=null and end!=null"> 
+		select c.* from (
+		select a.*, rownum rn from 
+		(
+		</if>
+			select * from v_rep_warning t
+			where 1 = 1
+			<if test="startDate1 != null and endDate1 != null">
+			and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+			</if>
+			<if test="field28 != null"> 
+			and t.field28 = #{field28}
+			</if>
+			<if test="field30 != null"> 
+			and t.field30 = #{field30}
+			</if>
+			<if test="field42 != null"> 
+			and t.field42 = #{field42}
+			</if>
+		<if test="start!=null and end!=null"> 
+		)
+		a where #{end,jdbcType=INTEGER} >= rownum) c
+		where c.rn >= #{start,jdbcType=INTEGER}
+		</if>
+	</select>
+	<select id="getRepWarningDetailCount" resultType="int">
+		select count(*) from v_rep_warning t
+		where 1 = 1
+		<if test="startDate1 != null and endDate1 != null">
+		and t.field36>=#{startDate1} and #{endDate1}>=t.field36
+		</if>
+		<if test="field28 != null"> 
+		and t.field28 = #{field28}
+		</if>
+		<if test="field30 != null"> 
+		and t.field30 = #{field30}
+		</if>
+		<if test="field42 != null"> 
+		and t.field42 = #{field42}
+		</if>
+	</select>
+</mapper>

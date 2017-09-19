@@ -1,0 +1,73 @@
+开发：
+1、安装JDK，配置环境变量
+2、安装eclipse，配置注释模版（codetemplates-complaints.xml）和代码格式（formatter-complaints.xml）
+3、安装svn插件，检出svn服务器代码
+4、安装jetty插件，配置jetty启动
+5、安装maven，把oracle驱动放到maven仓库
+6、安装oracle，执行用户对象文件，导入表数据
+7、安装plsql，配置D:\Oracle\product\10.1.0\Client_3\NETWORK\ADMIN\tnsnames.ora文件
+
+支持浏览器：
+1、安装Firefox浏览器，安装firebug插件调试
+2、谷歌Chrome浏览器
+3、IE浏览器
+4、360浏览器
+5、QQ浏览器
+6、遨游浏览器
+
+部署：
+1、安装JDK，配置环境变量
+2、安装jetty，编写启动文件，部署项目war包
+3、安装oracle，执行用户对象文件，导入表数据
+
+类名规则：
+Ori 开头；原始数据表
+Rep 开头：报表
+Sys 开头：系统登录、权限相关表
+Cha 开头：图表相关
+Controller 结尾：视图控制层
+Mapper 结尾：DAO数据操作层
+Service 结尾：业务相关层
+
+文件存放规则：
+JSP 文件： WEB-INF/views 
+JS 文件：/js
+框架配置文件： /resources
+
+相关技术：
+1、项目管理 Apache Maven
+2、开发过程使用jetty的eclipse插件部署，服务器使用jetty应用服务器部署项目
+3、服务后台java框架：spring、springMVC、myBatis
+4、使用mybatis-generator-code工具自动生成实体类、dao接口类、数据库映射文件
+5、前端页面javascript框架：jQuery、EasyUI、Highcharts
+6、集成单元测试 JUnit、数据库连接池采用 Druid、前后台数据交互采用JSON
+
+涉及The Apache Software Foundation相关：
+Apache Commons FileUpload
+Apache Commons BeanUtils
+Apache Maven
+Apache POI 
+Apache log4j
+
+权限设计：
+登录记录表：
+
+Maven安装Oracle jdbc jar包
+1.download jar 
+http://mvnrepository.com/artifact/com.oracle/ojdbc14/10.2.0.4.0
+
+2.rename jar
+ojdbc14-10.2.0.4.0.jar to ojdbc14.jar
+
+3.dos窗口
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.4.0 -Dpackaging=jar -Dfile=D:\2017.05.08\soft\ojdbc14.jar
+或通过eclipse maven build
+Run As -> Maven build... -> Goals
+Goals : install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.4.0 -Dpackaging=jar -Dfile=D:\2017.05.08\soft\ojdbc14.jar
+
+工程文件用GBK编码，pom.xml用UTF-8
+Properties for complaints -> Text file encoding -> Other:GBK
+
+通过maven build启动jetty
+Run As -> Maven build... -> Goals
+jetty:run
